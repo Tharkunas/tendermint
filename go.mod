@@ -24,6 +24,7 @@ require (
 	github.com/lib/pq v1.10.4
 	github.com/libp2p/go-buffer-pool v0.0.2
 	github.com/minio/highwayhash v1.0.2
+	github.com/oasisprotocol/ed25519 v0.0.0-20210127160119-f7017427c1ea
 	github.com/ory/dockertest v3.3.5+incompatible
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.11.0
