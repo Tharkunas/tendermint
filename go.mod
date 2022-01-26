@@ -24,7 +24,7 @@ require (
 	github.com/lib/pq v1.10.4
 	github.com/libp2p/go-buffer-pool v0.0.2
 	github.com/minio/highwayhash v1.0.2
-	github.com/oasisprotocol/ed25519 v0.0.0-20210127160119-f7017427c1ea
+	github.com/oasisprotocol/curve25519-voi v0.0.0-20211219162838-e9a669f65da9
 	github.com/oasisprotocol/safeopen v0.0.0-20200528085122-e01cfdfc7661
 	github.com/ory/dockertest v3.3.5+incompatible
 	github.com/pkg/errors v0.9.1
