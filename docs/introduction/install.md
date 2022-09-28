@@ -13,10 +13,26 @@ To download pre-built binaries, see the [releases page](https://github.com/tende
 You'll need `go` [installed](https://golang.org/doc/install) and the required
 environment variables set, which can be done with the following commands:
 
-```sh
-echo export GOPATH=\"\$HOME/go\" >> ~/.bash_profile
-echo export PATH=\"\$PATH:\$GOPATH/bin\" >> ~/.bash_profile
+## First of all, we are doing a system update.
 ```
+sudo apt update && sudo apt upgrade -y
+```
+## We are installing the library.
+```
+sudo apt install make clang pkg-config libssl-dev build-essential git jq ncdu bsdmainutils -y < "/dev/null"
+```
+## We are installing Go.
+```
+cd $HOME
+wget -O go1.18.2.linux-amd64.tar.gz https://go.dev/dl/go1.18.2.linux-amd64.tar.gz
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.2.linux-amd64.tar.gz && rm go1.18.2.linux-amd64.tar.gz
+echo 'export GOROOT=/usr/local/go' >> $HOME/.bashrc
+echo 'export GOPATH=$HOME/go' >> $HOME/.bashrc
+echo 'export GO111MODULE=on' >> $HOME/.bashrc
+echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bashrc && . $HOME/.bashrc
+go version
+```
+The go version command will show you which version you are
 
 ### Get Source Code
 
